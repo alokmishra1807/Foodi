@@ -9,7 +9,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 const queryClient = new QueryClient();
 
 // Access backend URL from environment variables
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 
 createRoot(document.getElementById('root')).render(
   <AuthProvider backendUrl={backendUrl}>
